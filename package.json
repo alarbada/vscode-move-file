@@ -1,5 +1,6 @@
 {
   "name": "vscode-move-file",
+  "publisher": "alarbada",
   "displayName": "Move File",
   "description": "Move files with fuzzy search folder picker",
   "version": "0.1.0",
@@ -9,23 +10,15 @@
   "categories": [
     "Other"
   ],
+  "activationEvents": [
+    "onCommand:moveFile.move"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "moveFile.move",
         "title": "Move File to Folder"
-      },
-      {
-        "command": "moveFile.handleTab",
-        "title": "Handle Tab for Move File"
-      }
-    ],
-    "keybindings": [
-      {
-        "command": "moveFile.handleTab",
-        "key": "tab",
-        "when": "inQuickOpen && inFilesMovePickerContext"
       }
     ]
   },
